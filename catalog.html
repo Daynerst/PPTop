@@ -7,6 +7,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <base target="_blank">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUN WEAR — Каталог</title>
+    <link href="cataloge.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">DRUN<span>WEAR</span></div>
+        <nav class="nav">
+            <a href="homepage.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="cart.html">Корзина</a>
+            <a href="korzina.html">Избранное</a>
+            <a href="profile.html">Личный кабинет</a>
+        </nav>
+        <div class="header-icons">
+            <button class="icon-btn" title="Корзина">
+                <span class="badge">0</span>
+            </button>
+            <button class="icon-btn" title="Избранное">
+                <span class="badge">0</span>
+            </button>
+            <div class="user-avatar">?</div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="filters">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск по товарам...">
+            </div>
+            <button class="filter-chip active">Все</button>
+            <button class="filter-chip">Верхняя одежда</button>
+            <button class="filter-chip">Худи</button>
+            <button class="filter-chip">Футболки</button>
+            <button class="filter-chip">Штаны</button>
+            <button class="filter-chip">Аксессуары</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">DRUN<span>WEAR</span></div>
+                <p>Премиальная уличная одежда с доставкой по всей России. Качество, стиль и комфорт в каждой детали.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Магазин</h4>
+                <a href="catalog.html">Каталог</a>
+                <a href="cart.html">Корзина</a>
+                <a href="korzina.html">Избранное</a>
+            </div>
+            <div class="footer-col">
+                <h4>Аккаунт</h4>
+                <a href="profile.html">Личный кабинет</a>
+                <a href="#">Вход / Регистрация</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <a href="#">support@drunwear.ru</a>
+                <a href="#">+7 (999) 123-45-67</a>
+                <a href="#">Москва, ул. Стиля, 1</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 DRUN WEAR. Все права защищены.</div>
+    </footer>
+
+</body>
+</html>
 </head>
 <header class="header">
 <div class="logo" onclick="router.navigate('home')">DRUN<span>WEAR</span></div>
