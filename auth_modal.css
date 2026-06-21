@@ -1,0 +1,226 @@
+:root {
+    --bg: #0f0f0f;
+    --bg-card: #1a1a1a;
+    --bg-hover: #252525;
+    --text: #f0f0f0;
+    --text-muted: #888;
+    --accent: #e8c547;
+    --accent-hover: #d4b13f;
+    --danger: #e74c3c;
+    --success: #2ecc71;
+    --border: #333;
+    --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ==================== MODAL OVERLAY ==================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ==================== MODAL ==================== */
+.modal {
+    background: var(--bg-card);
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    max-width: 400px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==================== MODAL HEADER ==================== */
+.modal-header {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.modal-close:hover {
+    color: var(--text);
+    background: var(--bg-hover);
+}
+
+/* ==================== MODAL BODY ==================== */
+.modal-body {
+    padding: 32px;
+}
+
+/* ==================== AUTH TABS ==================== */
+.auth-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+.auth-tab:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+.auth-tab.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+/* ==================== FORM ==================== */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+}
+.form-group input:focus {
+    border-color: var(--accent);
+}
+.form-group input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+.btn-primary {
+    background: var(--accent);
+    color: var(--bg);
+}
+.btn-primary:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* ==================== MODAL FOOTER ==================== */
+.modal-footer {
+    padding: 24px 32px;
+    border-top: 1px solid var(--border);
+}
+.modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* ==================== MEDIA QUERIES ==================== */
+@media (max-width: 480px) {
+    .modal {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+    .modal-header {
+        padding: 20px 24px;
+    }
+    .modal-header h2 {
+        font-size: 20px;
+    }
+    .modal-body {
+        padding: 24px;
+    }
+    .modal-footer {
+        padding: 20px 24px;
+    }
+    .auth-tabs {
+        flex-direction: row;
+    }
+    .auth-tab {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
