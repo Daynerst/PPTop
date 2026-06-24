@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRUN WEAR — Магазин одежды</title>
+    <title>DRUN WEAR — Личный кабинет</title>
     <link href="profile.css" rel="stylesheet">
 
-<base target="_blank">
 </head>
 <header class="header">
 <div class="logo" onclick="router.navigate('home')">DRUN<span>WEAR</span></div>
         <nav class="nav">
-            <a href="homepage.html" class="active" data-page="home">Главная</a>
+            <a href="homepage.html" data-page="home">Главная</a>
             <a href="catalog.html" data-page="catalog">Каталог</a>
             <a href="cart.html" data-page="cart">Корзина</a>
-            <a href="korzina.html" data-page="wishlist">Избранное</a>
-            <a href="profile.html" data-page="profile">Личный кабинет</a>
+            <a href="wishlist.html" data-page="wishlist">Избранное</a>
+            <a href="profile.html" class="active" data-page="profile">Личный кабинет</a>
             <a href="admin.html" data-page="admin" id="admin-link" style="display:none;">Админ</a>
         </nav>
         <div class="header-icons">
             <button class="icon-btn" onclick="router.navigate('cart')" title="Корзина">
-                <span class="badge" id="cart-badge">0</span>
+                <span class="badge" id="cart-badge">Корзина 0</span>
             </button>
             <button class="icon-btn" onclick="router.navigate('wishlist')" title="Избранное">
-                <span class="badge" id="wishlist-badge">0</span>
+                <span class="badge" id="wishlist-badge">Избранное 0</span>
             </button>
             <div class="user-avatar" id="user-avatar" onclick="toggleAuth()">?</div>
         </div>
@@ -42,6 +41,30 @@
                     <button class="profile-tab" onclick="profile.setTab('settings')">Настройки</button>
                 </div>
                 <div id="profile-content"></div>
+            </div>
+        </div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">DRUN<span>WEAR</span></div>
+                <p>Премиальная уличная одежда с доставкой по всей России. Качество, стиль и комфорт в каждой детали.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Магазин</h4>
+                <a href="catalog.html">Каталог</a>
+                <a href="cart.html">Корзина</a>
+                <a href="wishlist.html">Избранное</a>
+            </div>
+            <div class="footer-col">
+                <h4>Аккаунт</h4>
+                <a href="profile.html">Личный кабинет</a>
+                <a href="#">Вход / Регистрация</a>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <a href="#">support@drunwear.ru</a>
+                <a href="#">+7 (999) 123-45-67</a>
+                <a href="#">Москва, ул. Стиля, 1</a>
             </div>
         </div>
         <div class="footer-bottom">© 2026 DRUN WEAR. Все права защищены.</div>

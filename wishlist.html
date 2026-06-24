@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRUN WEAR — Магазин одежды</title>
-    <link href="homepage.css" rel="stylesheet">
+    <title>DRUN WEAR — Избранное</title>
+    <link href="wishlist.css" rel="stylesheet">
 
-<base target="_blank">
 </head>
-   <main class="main">
+<body>
 <header class="header">
 <div class="logo" onclick="router.navigate('home')">DRUN<span>WEAR</span></div>
         <nav class="nav">
-            <a href="homepage.html" class="active" data-page="home">Главная</a>
+            <a href="homepage.html" data-page="home">Главная</a>
             <a href="catalog.html" data-page="catalog">Каталог</a>
             <a href="cart.html" data-page="cart">Корзина</a>
-            <a href="wishlist.html" data-page="wishlist">Избранное</a>
+            <a href="wishlist.html" class="active" data-page="wishlist">Избранное</a>
             <a href="profile.html" data-page="profile">Личный кабинет</a>
             <a href="admin.html" data-page="admin" id="admin-link" style="display:none;">Админ</a>
         </nav>
@@ -29,18 +28,13 @@
             <div class="user-avatar" id="user-avatar" onclick="toggleAuth()">?</div>
         </div>
     </header>
-        <div class="page active" id="page-home">
-            <div class="hero">
-                <h1>Новая коллекция<br><span>DRUN WEAR</span></h1>
-                <p>Премиальная уличная одежда для тех, кто ценит стиль и качество</p>
-                <button class="btn btn-primary" onclick="router.navigate('catalog')">Смотреть коллекцию →</button>
-            </div>
+     <div class="page" id="page-wishlist">
             <div class="products-section">
-                <h2 class="section-title">Популярное</h2>
-                <p class="section-subtitle">Топовые позиции этого сезона</p>
-                <div class="products-grid" id="featured-products"></div>
+                <h2 class="section-title">Избранное</h2>
+                <p class="section-subtitle">Товары, которые вам понравились</p>
+                <div class="products-grid" id="wishlist-products"></div>
             </div>
-        </div>
+     </div>
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">

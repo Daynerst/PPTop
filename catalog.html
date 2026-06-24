@@ -3,15 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRUN WEAR — Магазин одежды</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<base target="_blank">
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRUN WEAR — Каталог</title>
     <link href="cataloge.css" rel="stylesheet">
 </head>
@@ -23,15 +14,15 @@
             <a href="homepage.html">Главная</a>
             <a href="catalog.html" class="active">Каталог</a>
             <a href="cart.html">Корзина</a>
-            <a href="korzina.html">Избранное</a>
+            <a href="wishlist.html">Избранное</a>
             <a href="profile.html">Личный кабинет</a>
         </nav>
         <div class="header-icons">
             <button class="icon-btn" title="Корзина">
-                <span class="badge">0</span>
+                <span class="badge">Корзина 0</span>
             </button>
             <button class="icon-btn" title="Избранное">
-                <span class="badge">0</span>
+                <span class="badge">Избранное 0</span>
             </button>
             <div class="user-avatar">?</div>
         </div>
@@ -61,7 +52,7 @@
                 <h4>Магазин</h4>
                 <a href="catalog.html">Каталог</a>
                 <a href="cart.html">Корзина</a>
-                <a href="korzina.html">Избранное</a>
+                <a href="wishlist.html">Избранное</a>
             </div>
             <div class="footer-col">
                 <h4>Аккаунт</h4>
@@ -78,59 +69,5 @@
         <div class="footer-bottom">© 2026 DRUN WEAR. Все права защищены.</div>
     </footer>
 
-</body>
-</html>
-</head>
-<header class="header">
-<div class="logo" onclick="router.navigate('home')">DRUN<span>WEAR</span></div>
-        <nav class="nav">
-            <a href="homepage.html" class="active" data-page="home">Главная</a>
-            <a href="catalog.html" data-page="catalog">Каталог</a>
-            <a href="cart.html" data-page="cart">Корзина</a>
-            <a href="korzina.html" data-page="wishlist">Избранное</a>
-            <a href="profile.html" data-page="profile">Личный кабинет</a>
-            <a href="admin.html" data-page="admin" id="admin-link" style="display:none;">Админ</a>
-        </nav>
-        <div class="header-icons">
-            <button class="icon-btn" onclick="router.navigate('cart')" title="Корзина">
-                <span class="badge" id="cart-badge">0</span>
-            </button>
-            <button class="icon-btn" onclick="router.navigate('wishlist')" title="Избранное">
-                <span class="badge" id="wishlist-badge">0</span>
-            </button>
-            <div class="user-avatar" id="user-avatar" onclick="toggleAuth()">?</div>
-        </div>
-    </header>
-        <div class="page" id="page-catalog">
-            <div class="filters">
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Поиск по товарам..." oninput="catalog.filter()">
-                </div>
-                <button class="filter-chip active" data-category="all" onclick="catalog.setCategory('all')">Все</button>
-                <button class="filter-chip" data-category="outerwear" onclick="catalog.setCategory('outerwear')">Верхняя одежда</button>
-                <button class="filter-chip" data-category="hoodies" onclick="catalog.setCategory('hoodies')">Худи</button>
-                <button class="filter-chip" data-category="tshirts" onclick="catalog.setCategory('tshirts')">Футболки</button>
-                <button class="filter-chip" data-category="pants" onclick="catalog.setCategory('pants')">Штаны</button>
-                <button class="filter-chip" data-category="accessories" onclick="catalog.setCategory('accessories')">Аксессуары</button>
-            </div>
-            <div class="products-section">
-                <div class="products-grid" id="catalog-products"></div>
-            </div>
-        </div>
-
-        <!-- Product Detail -->
-        <div class="page" id="page-product">
-            <div class="product-detail" id="product-detail"></div>
-        </div>
-
-        <!-- Cart -->
-        <div class="page" id="page-cart">
-            <div class="cart-page">
-                <h2 class="section-title">Корзина</h2>
-                <div id="cart-content"></div>
-            </div>
-        </div>
-            <div class="footer-bottom">© 2026 DRUN WEAR. Все права защищены.</div>
-    </footer>
 </body>
 </html>
